@@ -8,8 +8,7 @@
 </head>
 <body class="flex justify-center items-center h-screen bg-gray-100">
     <div class="bg-white p-8 rounded shadow-md w-96">
-        <h2 class="text-2xl text-blue-700 font-bold text-center mb-6">Login</h2>
-
+    <h2 class="text-2xl font-bold mb-6 text-center text-gray-800">Login</h2>
         @if ($errors->any())
             <div class="text-red-500 text-sm mb-4">
                 {{ $errors->first() }}
@@ -33,7 +32,7 @@
             <button type="submit" class="w-full bg-blue-500 text-white p-2 rounded hover:bg-blue-700">Login</button>
             <div class="text-center mt-4">
                 Don't have an account?  
-                <a href="{{ route('register') }}" class="text-blue-500 hover:underline">Register</a>
+                <a href="{{ route('register') }}" class="text-blue-500 hover:underline">Register here</a>
             </div>
         </form>
     </div>
