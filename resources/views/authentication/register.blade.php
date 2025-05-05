@@ -55,6 +55,10 @@
                 <button type="submit" class="w-full p-3 bg-blue-600 text-white font-semibold rounded-md hover:bg-blue-700 transition duration-200">
                     Submit
                 </button>
+                <div class="text-center mt-4">
+                Already have an account?  
+                <a href="{{ route('login') }}" class="text-blue-500 hover:underline">Login here</a>
+            </div>
             </div>
         </form>
     </div>
