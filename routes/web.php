@@ -17,12 +17,12 @@ Route::get('/login', function () {
     return view('authentication.login');
 })->name('login');
 
-Route::post('/login', [AuthController::class, 'login'])->name('login.post'); // Add this line
+Route::post('/login', [AuthController::class, 'login'])->name('login.post'); 
 
 Route::get('/register', function () {
     return view('authentication.register');
-})->name('register'); // Added GET route for registration page
+})->name('register'); 
 
 Route::post('/register', [AuthController::class, 'register'])->name('register.post');
 
-Route::get('/logout', [AuthController::class, 'logout'])->name('logout.post');
+Route::post('/logout', [AuthController::class, 'logout'])->name('logout');
