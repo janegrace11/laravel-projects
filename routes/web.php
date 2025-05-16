@@ -6,7 +6,7 @@ use App\Http\Controllers\AuthController;
 
 // Home route
 Route::get('/', function () {
-    return view('welcome');
+    return redirect()->route('login');
 });
 
 // Product routes
