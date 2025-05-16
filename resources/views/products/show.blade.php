@@ -14,41 +14,21 @@ btn-primary btn-sm">&larr; Back</a>
  </div>
  <div class="card-body">
  <div class="row">
- <label for="code" class="col-md-4 col-formlabel text-md-end text-start"><strong>Code:</strong></label>
- <div class="col-md-6" style="line-height:
-35px;">
- {{ $product->code }}
+    <div class="col-md-6">
+        <div class="mb-2"><strong>Code:</strong> {{ $product->code }}</div>
+        <div class="mb-2"><strong>Name:</strong> {{ $product->name }}</div>
+        <div class="mb-2"><strong>Quantity:</strong> {{ $product->quantity }}</div>
+        <div class="mb-2"><strong>Price:</strong> {{ $product->price }}</div>
+        <div class="mb-2"><strong>Description:</strong> {{ $product->description }}</div>
+    </div>
+    <div class="col-md-6 d-flex align-items-center justify-content-center">
+        @if($product->image)
+            <img src="{{ asset('storage/' . $product->image) }}" alt="Product Image" class="img-fluid rounded" style="max-width: 300px;">
+        @else
+            <span class="text-muted">No image available</span>
+        @endif
+    </div>
  </div>
- </div>
- <div class="row">
- <label for="name" class="col-md-4 col-formlabel text-md-end text-start"><strong>Name:</strong></label>
- <div class="col-md-6" style="line-height:
-35px;">
- {{ $product->name }}
- </div>
- </div>
- <div class="row">
- <label for="quantity" class="col-md-4 colform-label text-md-end text-start"><strong>Quantity:</strong></label>
- <div class="col-md-6" style="line-height:
-35px;">
- {{ $product->quantity }}
- </div>
- </div>
- <div class="row">
- <label for="price" class="col-md-4 col-formlabel text-md-end text-start"><strong>Price:</strong></label>
- <div class="col-md-6" style="line-height:
-35px;">
- {{ $product->price }}
- </div>
- </div>
- <div class="row">
- <label for="description" class="col-md-4 colform-label text-md-end textstart"><strong>Description:</strong></label>
- <div class="col-md-6" style="line-height:
-35px;">
- {{ $product->description }}
- </div>
- </div>
- 
  </div>
  </div>
  </div> 
