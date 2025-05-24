@@ -9,8 +9,10 @@ Route::get('/', function () {
     return redirect()->route('login');
 });
 
-// Product routes
-Route::resource('products', ProductController::class);
+
+Route::middleware(['auth'])->group(function () {
+    Route::resource('products', ProductController::class);
+});
 
 // Authentication routes
 Route::get('/login', function () {
